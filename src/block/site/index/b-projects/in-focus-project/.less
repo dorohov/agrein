@@ -1,3 +1,78 @@
 .in-focus-project {
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	#site.color(#ffffff);
+	#site.w(75%);
+	//#site.bg(#ff0000);
+	#site.bpos();
+	#site.brep();
+	#site.bsize(cover);
+	#site.ff('Open Sans');
+	
+	.country-flag {
+		position:absolute;
+		top:95px;
+		
+		img {
+			max-width:150px;
+			max-height:150px;
+		}
+	}
+	
+	.logo {
+		margin-bottom:40px;
+		margin-top:95px;
+		
+		img {
+			
+		}
+	}
+	
+	.type {
+		margin-bottom:30px;
+		#site.size(20px);
+	}
+	
+	.title {
+		margin-bottom:30px;
+		#site.size(100px);
+		#site.ff('PfDinTextCompPro');
+		#site.bold(700);
+	}
+	
+	.desc {
+		margin-bottom:60px;
+		#site.size(30px);
+	}
+	
+	.more {
+		a {
+			display:inline-block;
+			padding:16px 100px;
+			border:1px #ff0000 solid;
+			#site.color(#ffffff);
+			#site.size(18px);
+		}
+	}
+	
+	.next-project {
+		position:absolute;
+		top:0;
+		right:60px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:stretch;
+		#site.h(100%);
+		
+		a {
+			display:inline-block;
+			#site.w(47px);
+			#site.h(86px);
+			#site.bi('b-projects/next-project-btn.png')
+		}
+	}
 	
 }

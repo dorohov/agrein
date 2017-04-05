@@ -54,5 +54,6 @@
 		"city":"г.Москва",
 		"adr":"бул. Цветной, 30"
 	},
-	"logo-path":"/img/b-partners"
+	"logo-path":"/img/b-partners",
+	"project-path":"/img/b-projects"
 }
