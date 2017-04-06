@@ -4,7 +4,7 @@ $(document.body).on('azbn.ajax.get', null, {}, function(event, url){
 	
 	$.get(url, {}, function(data){
 		
-		
+		$(document.body).trigger('azbn.content-modal.open', ['#project-viewer']);
 		
 	});
 	

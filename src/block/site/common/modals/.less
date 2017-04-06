@@ -10,7 +10,17 @@ body.modalled {
 	left:0;
 	#site.w(100%);
 	#site.h(100%);
-	#site.bg(rgba(0,0,0,0.5));
+	#site.z(15);
+	
+	&:before {
+		content:'';
+		position:absolute;
+		top:0;
+		left:0;
+		#site.w(100%);
+		#site.h(100%);
+		#site.bg(rgba(0,0,0,0.5));
+	}
 	
 	body.modalled &.active {
 		display:flex;
@@ -30,6 +40,11 @@ body.modalled {
 		#site.bg(rgba(255,255,255,1));
 		#site.w(100%);
 		#site.h(75%);
+		
+		&.small {
+			max-width:800px;
+			#site.h(50%);
+		}
 		
 		@media @media-max-1199 {
 			#site.h(90%);

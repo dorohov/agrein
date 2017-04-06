@@ -3,7 +3,7 @@ $(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-proje
 	event.preventDefault();
 	//event.stopPropogation();
 	
-	if(screenJS.isMax(767)) {
+	if(screenJS.isMin(768)) {
 		
 		var b_projects = $(document.body).find('.b-projects');
 		
