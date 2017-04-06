@@ -48,6 +48,14 @@ function __fecss_ScreenJS() {
 		return (ctrl.screen.w > 1199);
 	};
 	
+	ctrl.isMax = function(w) {
+		return !(ctrl.screen.w > w);
+	}
+	
+	ctrl.isMin = function(w) {
+		return !(ctrl.screen.w < w);
+	}
+	
 	ctrl.screenIs = function() {
 		var result = 'noname';
 		if(ctrl.isXS()) {

@@ -1,11 +1,26 @@
 .b-partners {
 	padding:135px 0 150px;
 	
+	.hidden-container {
+		opacity:0;
+		height:0;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+		align-items:stretch;
+		overflow:hidden;
+	}
+	
 	.title {
 		margin-bottom:80px;
 		#site.size(72px);
 		#site.color(#000000);
 		#site.ff('PfDinTextCompPro');
+		
+		@media @media-max-767 {
+			#site.size(48px);
+		}
+		
 	}
 	
 	.logo-carousel {
@@ -13,6 +28,7 @@
 		flex-direction:row;
 		justify-content:space-between;
 		align-items:stretch;
+		overflow:hidden;
 		
 		.control {
 			
@@ -44,32 +60,48 @@
 			}
 		}
 		
-		.logo-container {
+		.viewer {
 			order:5;
-			display:flex;
-			flex-direction:row;
-			justify-content:space-around;
-			align-items:stretch;
+			overflow:hidden;
 			#site.w(90%);
+		}
+		
+		.logo-container {
+			//display:flex;
+			//flex-direction:row;
+			//justify-content:space-around;
+			//align-items:stretch;
+			//transform-origin:0 0;
+			//transition:all @trans-speed * 2 ease;
 			
-			.item {
-				text-align:center;
-				border-right:1px #ff0000 solid;
-				padding:0 42px;
-				#site.lh(64px);
-				
-				&:last-child {
+			.owl-item {
+				.item {
+					text-align:center;
 					border-right:1px transparent solid;
-				}
-				
-				a {
+					padding:0 24px;
+					#site.lh(64px);
+					
+					&.active {
+						border-right:1px #ff0000 solid;
+					}
+					
+					a {
+						display:inline-block;
+						vertical-align: middle;
+					}
+					img {
+						max-height:64px;
+						vertical-align: middle;
+						width:auto;
+						max-width:100%;
+					}
 					
 				}
-				img {
-					max-height:64px;
-					vertical-align: middle;
+				&.active.__no-border {
+					.item {
+						border-right:1px transparent solid;
+					}
 				}
-				
 			}
 		}
 		
