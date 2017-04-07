@@ -116,7 +116,7 @@ $(document.body).on('click.azbn', '.b-projects .project-list .items .item', {}, 
 	
 	if(project_id > 0) {
 		
-		$('.b-projects .project-list .items .item[data-project-id="' + project_id + 'p"]').eq(0).trigger('click');
+		$('.b-projects .project-list .items .item[data-project-id="' + project_id + '"]').eq(0).trigger('click');
 		
 	} else {
 		

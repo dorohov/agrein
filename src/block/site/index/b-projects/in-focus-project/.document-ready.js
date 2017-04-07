@@ -58,6 +58,7 @@ $(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-proje
 		in_focus_project
 			.css({
 				'padding-left' : mrg + 'px',
+				'padding-right' : mrg + 'px',
 			})
 			.find('.country-flag')
 				.css({
