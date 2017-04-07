@@ -38,7 +38,8 @@
 	
 	span.status {
 		opacity:0;
-		#site.color(rgba(255,0,0,1));
+		margin-left:0.5em;
+		#site.color(rgba(0,0,0,1));
 	}
 	
 	span.help {
@@ -60,13 +61,11 @@
 		transition:all @trans-speed / 1.25 ease;
 		display:block;
 		border-radius:0px;
-		border:1px #7ba83f solid;
-		border-bottom-width:3px;
-		//border-right-width:2px;
-		padding: .4em;
+		border:1px rgba(0,0,0,0.4) solid;
+		padding: .4em 1em;
 		margin-left:auto;
 		margin-right:auto;
-		#site.ff('Arial');
+		#site.ff('Open Sans');
 		#site.size(18px);
 		#site.bg(transparent);
 		#site.w(100%);
@@ -86,7 +85,6 @@
 			.ios & {
 				transform: scale(0.67);
 				border:2px #7ba83f solid;
-				border-bottom-width:2px;
 				vertical-align:middle;
 				#site.bg(transparent);
 				#site.color(#7ba83f);
@@ -99,8 +97,8 @@
 		
 		&:focus {
 			outline:none;
-			border-color:rgba(147,46,168,1);
-			#site.bg(rgba(190,245,116,0.15));
+			border-color:rgba(255,0,0,0.6);
+			#site.bg(rgba(255,255,255,1));
 		}
 	}
 	

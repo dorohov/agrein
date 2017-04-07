@@ -1,5 +1,5 @@
 
-$(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-project', {}, function(event, data){
+$(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-project', {}, function(event, project_id){
 	event.preventDefault();
 	//event.stopPropogation();
 	
@@ -16,7 +16,24 @@ $(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-proje
 		var mrg = btn_cont.offset().left;
 		
 		
-		if(data) {
+		if(project_id) {
+			
+			//console.log('Project id:', project_id);
+			
+			var project = SiteData.projects[project_id];
+			//var in_focus_project = $('.b-projects .in-focus-project');
+			
+			in_focus_project.find('.country-flag img').attr('src', project.flag);
+			in_focus_project.find('.logo img').attr('src', project.logo);
+			in_focus_project.find('.type').html(project.type);
+			in_focus_project.find('.title').html(project.title);
+			in_focus_project.find('.desc').html(project.desc);
+			
+			in_focus_project.find('.more a').attr('href', project.link);
+			
+			in_focus_project.css({
+				'background-image' : 'url(' + project.image.full + ')',
+			})
 			
 		}
 		

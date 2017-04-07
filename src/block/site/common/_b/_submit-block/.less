@@ -1,7 +1,7 @@
 .submit-block {
-	margin:1em 0 2em;
+	margin:3em 0 2em;
 	display:none;
-	#site.size(1rem);
+	#site.size(18px);
 	
 	&[data-input-status="ok"], &[data-input-status="1"] {
 		display:block;
@@ -9,10 +9,11 @@
 	
 	span.help {
 		opacity:0;
-		display:inline-block;
+		display:none;
+		//display:inline-block;
 		margin-left:1.5em;
 		transition:all @trans-speed / 1.25 ease;
-		#site.size(2em);
+		#site.size(18px);
 		#site.italic();
 		#site.color(#999999);
 		
@@ -28,7 +29,7 @@
 		.cleardefault();
 		transition:all @trans-speed / 1.25 ease;
 		display:inline-block;
-		padding:1em 1.5em;
+		padding:.7em 1.2em;
 		border-radius:0px;
 		border:1px transparent solid;
 		cursor:pointer;
@@ -41,9 +42,9 @@
 		}
 		
 		&:hover {
-			border-color:#de74f5;
-			#site.color(#ffffff);
-			#site.bg(green);
+			border-color:#ff0000;
+			#site.color(#ff0000);
+			#site.bg(#ffffff);
 			
 			& + span.help {
 				opacity:1;
@@ -51,8 +52,8 @@
 		}
 		
 		&, &[data-style="default"] {
-			#site.color(#ffffff);
-			#site.bg(#7ba83f);
+			#site.color(#000000);
+			#site.bg(#ffffff);
 		}
 		
 		&.__xs__fullwidth {

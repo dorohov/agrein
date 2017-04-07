@@ -11,6 +11,13 @@ $(document.body).on('click.azbn', '.content-modal', {}, function(event){
 		$(document.body).removeClass('modalled');
 		$('.content-modal').removeClass('active');
 		
+		if(_target.attr('id') == 'project-viewer' || _target.closest('.content-modal').attr('id') == 'project-viewer') {
+			
+			window.history.pushState(null, null, '/');
+		}
+		
+		$(window).trigger('resize');
+		
 	}
 	
 });
@@ -21,6 +28,8 @@ $(document.body).on('azbn.content-modal.open', null, {}, function(event, uid){
 	
 	$(uid + '.content-modal').addClass('active');
 	$(document.body).addClass('modalled');
+	
+	$(window).trigger('resize');
 	
 });
 

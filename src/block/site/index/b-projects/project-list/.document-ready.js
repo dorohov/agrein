@@ -5,8 +5,7 @@ $(document.body).on('azbn.render.project-list', '.b-projects .project-list', {},
 	
 	var block = $(this);
 	
-	if(screenJS.isMax(767)) {
-		
+	if(screenJS.isMin(768)) {
 		
 		var items = block.find('.items .item');
 		
@@ -18,7 +17,8 @@ $(document.body).on('azbn.render.project-list', '.b-projects .project-list', {},
 			.attr('data-item-amount', amount)
 			.attr('data-item-height', h)
 			.css({
-				height : (h * amount) + 'px',
+				'height' : (h * amount) + 'px',
+				'max-height' : (h * amount) + 'px',
 			})
 		;
 		
@@ -30,28 +30,40 @@ $(document.body).on('azbn.render.project-list', '.b-projects .project-list', {},
 	
 });
 
-$(document.body).on('click.azbn', '.b-projects .project-list .item', {}, function(event){
+$(document.body).on('click.azbn', '.b-projects .project-list .items .item', {}, function(event){
 	event.preventDefault();
 	
 	var btn = $(this);
+	var project_id = parseInt(btn.attr('data-project-id')) || 0;
+	
+	var items = btn.closest('.items');
+	var block = items.closest('.project-list');
 	
 	if(screenJS.isMax(767)) {
 		
 		var href = btn.attr('href');
 		
+		$('.b-projects .in-focus-project').trigger('azbn.render.in-focus-project', [project_id]);
+		
+		$('.b-projects .in-focus-project .more a').trigger('click');
 		
 	} else if(screenJS.isMax(1199) && screenJS.isMin(768)) {
 		
 		var href = btn.attr('href');
 		
+		$('.b-projects .in-focus-project').trigger('azbn.render.in-focus-project', [project_id]);
 		
+		//$('.b-projects .in-focus-project .more a').trigger('click');
+		
+		btn.closest('.project-list').find('.item.active').removeClass('active');
+		btn.addClass('active');
+		
+		$('html, body').animate({
+			scrollTop: ($('.b-projects .in-focus-project').offset().top + 0)
+		}, 400);
 		
 	} else {
 		
-		
-		
-		var items = btn.closest('.items');
-		var block = items.closest('.project-list');
 		var item_arr = items.find('.item');
 		
 		var length = item_arr.length;
@@ -86,9 +98,44 @@ $(document.body).on('click.azbn', '.b-projects .project-list .item', {}, functio
 			
 		}
 		
+		
+		$('.b-projects .in-focus-project').trigger('azbn.render.in-focus-project', [project_id]);
+		
+		
 		btn.closest('.project-list').find('.item.active').removeClass('active');
 		btn.addClass('active');
 		
 	}
 	
 });
+
+
+(function(){
+	
+	var project_id = parseInt($('.b-projects').attr('data-project-id')) || 0;
+	
+	if(project_id > 0) {
+		
+		$('.b-projects .project-list .items .item[data-project-id="' + project_id + 'p"]').eq(0).trigger('click');
+		
+	} else {
+		
+		if(screenJS.isMax(1199)) {
+			
+			if(screenJS.isMax(767)) {
+				
+			} else {
+				
+				$('.b-projects .project-list .items .item').eq(0).trigger('click');
+				
+			}
+			
+		} else {
+			
+			$('.b-projects .project-list .items .item').eq(1).trigger('click');
+			
+		}
+		
+	}
+	
+})();

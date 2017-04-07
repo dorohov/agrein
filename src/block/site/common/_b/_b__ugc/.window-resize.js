@@ -12,7 +12,7 @@
 			
 			$('.mcs-content').mCustomScrollbar({
 				axis : 'y',
-				setHeight : (block.parent().outerHeight(true) - 90) + 'px',
+				setHeight : (block.closest('.modal-content').outerHeight(true) - 90) + 'px',
 				alwaysShowScrollbar : 2,
 				live : true,
 			});

@@ -43,7 +43,8 @@ body.modalled {
 		
 		&.small {
 			max-width:800px;
-			#site.h(50%);
+			min-height:60%;
+			#site.h(auto);
 		}
 		
 		@media @media-max-1199 {
@@ -76,6 +77,10 @@ body.modalled {
 		.modal-content {
 			overflow:hidden;
 			padding:45px 100px;
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;
 			#site.w(100%);
 			#site.h(100%);
 			
@@ -85,6 +90,11 @@ body.modalled {
 			
 			@media @media-max-767 {
 				padding:50px 25px 10px;
+			}
+			
+			& > .b__ugc__html {
+				height:100% !important;
+				#site.w(100%);
 			}
 		}
 	}
