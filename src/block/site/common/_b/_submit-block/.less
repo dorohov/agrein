@@ -31,7 +31,7 @@
 		display:inline-block;
 		padding:.7em 1.2em;
 		border-radius:0px;
-		border:1px transparent solid;
+		border:1px rgba(255, 0, 0, 0.5) solid;
 		cursor:pointer;
 		#site.size(1.75em);
 		#site.bold();
@@ -42,9 +42,9 @@
 		}
 		
 		&:hover {
-			border-color:#ff0000;
-			#site.color(#ff0000);
-			#site.bg(#ffffff);
+			border-color:rgba(255, 0, 0, 0.5);
+			#site.color(rgba(255, 255, 255, 1));
+			#site.bg(rgba(255, 0, 0, 0.5));
 			
 			& + span.help {
 				opacity:1;
@@ -52,8 +52,8 @@
 		}
 		
 		&, &[data-style="default"] {
-			#site.color(#000000);
-			#site.bg(#ffffff);
+			#site.color(rgba(255, 0, 0, 0.5));
+			#site.bg(transparent);
 		}
 		
 		&.__xs__fullwidth {
