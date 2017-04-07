@@ -1,6 +1,10 @@
 .b-partners {
 	padding:135px 0 150px;
 	
+	@media @media-max-767 {
+		padding:70px 0;
+	}
+	
 	.hidden-container {
 		opacity:0;
 		height:0;
@@ -13,11 +17,13 @@
 	
 	.title {
 		margin-bottom:80px;
-		#site.size(72px);
+		.calcFontSize(28, 72, 320, 1920);
+		//#site.size(72px);
 		#site.color(#000000);
 		#site.ff('PfDinTextCompPro');
 		
 		@media @media-max-767 {
+			margin-bottom:40px;
 			#site.size(48px);
 		}
 		
@@ -81,21 +87,22 @@
 					padding:0 24px;
 					#site.lh(64px);
 					
-					&.active {
-						border-right:1px #ff0000 solid;
-					}
-					
-					a {
+					.img-cont {
 						display:inline-block;
 						vertical-align: middle;
 					}
 					img {
 						max-height:64px;
 						vertical-align: middle;
-						width:auto;
+						//width:auto;
 						max-width:200px;
 					}
 					
+				}
+				&.active {
+					.item {
+						border-right:1px #ff0000 solid;
+					}
 				}
 				&.active.__no-border {
 					.item {

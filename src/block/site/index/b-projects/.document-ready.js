@@ -3,23 +3,19 @@
 $(document.body).on('azbn.render.b-projects', '.b-projects', {}, function(event){
 	event.preventDefault();
 	
+	var b_projects = $(this);
+	
 	if(screenJS.isMax(1199)) {
 		
-		/*
-		if($(document.body).hasClass('is-mainpage')) {
-			
-			$('.b-projects .project-list .items .item').eq(0).trigger('click');
-			
-		} else {
-			
-			
-			
-		}
-		*/
+		b_projects.find('.in-focus-project').css({
+			width : '100%',
+		});
+		
+		b_projects.find('.project-list').css({
+			width : '100%',
+		});
 		
 	} else {
-		
-		var b_projects = $(this);
 		
 		var btn_cont = $(document.body).find('header .header__container .item:last-child');
 		
@@ -36,19 +32,6 @@ $(document.body).on('azbn.render.b-projects', '.b-projects', {}, function(event)
 		b_projects.find('.in-focus-project').trigger('azbn.render.in-focus-project');
 		
 		b_projects.find('.project-list').trigger('azbn.render.project-list', [4]);
-		
-		
-		/*
-		if($(document.body).hasClass('is-mainpage')) {
-			
-			$('.b-projects .project-list .items .item').eq(1).trigger('click');
-			
-		} else {
-			
-			
-			
-		}
-		*/
 		
 	}
 	

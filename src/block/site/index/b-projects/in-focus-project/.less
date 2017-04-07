@@ -10,6 +10,23 @@
 	#site.brep();
 	#site.bsize(cover);
 	#site.ff('Open Sans');
+	#site.z(3);
+	
+	&:before {
+		content:'';
+		position:absolute;
+		top:0;
+		left:0;
+		#site.w(100%);
+		#site.h(100%);
+		#site.z(1);
+		#site.bg(rgba(0,0,0,0.35));
+	}
+	
+	.cont {
+		position:relative;
+		#site.z(2);
+	}
 	
 	@media @media-max-1199 {
 		padding-left:25px;
@@ -24,6 +41,12 @@
 	.country-flag {
 		position:absolute;
 		top:95px;
+		
+		&.empty-field {
+			img {
+				opacity:0;
+			}
+		}
 		
 		img {
 			max-width:150px;
@@ -45,14 +68,22 @@
 		margin-bottom:40px;
 		margin-top:95px;
 		
+		&.empty-field {
+			img {
+				opacity:0;
+			}
+		}
+		
 		@media @media-max-1199 {
 			margin-top:50px;
+			max-height:110px;
 		}
 	}
 	
 	.type {
 		margin-bottom:30px;
-		#site.size(20px);
+		//#site.size(20px);
+		.calcFontSize(14, 20, 320, 1920);
 		
 		@media @media-max-1199 {
 			margin-right:125px;
@@ -61,7 +92,8 @@
 	
 	.title {
 		margin-bottom:30px;
-		#site.size(100px);
+		//#site.size(100px);
+		.calcFontSize(32, 100, 320, 1920);
 		#site.ff('PfDinTextCompPro');
 		#site.bold(700);
 		
@@ -72,10 +104,11 @@
 	
 	.desc {
 		margin-bottom:60px;
+		margin-right:125px;
 		#site.size(30px);
 		
 		@media @media-max-1199 {
-			margin-right:125px;
+			margin-right:60px;
 		}
 	}
 	

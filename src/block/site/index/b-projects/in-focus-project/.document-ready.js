@@ -23,8 +23,23 @@ $(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-proje
 			var project = SiteData.projects[project_id];
 			//var in_focus_project = $('.b-projects .in-focus-project');
 			
-			in_focus_project.find('.country-flag img').attr('src', project.flag);
-			in_focus_project.find('.logo img').attr('src', project.logo);
+			if(project.flag != '') {
+				in_focus_project.find('.country-flag img').attr('src', project.flag);
+				in_focus_project.find('.country-flag').removeClass('empty-field');
+			} else {
+				in_focus_project.find('.country-flag img').attr('src', project.flag);
+				in_focus_project.find('.country-flag').addClass('empty-field');
+			}
+			
+			if(project.logo != '') {
+				in_focus_project.find('.logo img').attr('src', project.logo);
+				in_focus_project.find('.logo').removeClass('empty-field');
+			} else {
+				in_focus_project.find('.logo img').attr('src', '/wp-content/uploads/2017/04/logo_freitag_invest_erb.png');
+				in_focus_project.find('.logo').addClass('empty-field');
+			}
+			
+			
 			in_focus_project.find('.type').html(project.type);
 			in_focus_project.find('.title').html(project.title);
 			in_focus_project.find('.desc').html(project.desc);
