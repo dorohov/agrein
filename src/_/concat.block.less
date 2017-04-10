@@ -1139,9 +1139,10 @@ hr {
 			position:absolute;
 			top:0;
 			left:0;
+			transition:all @trans-speed ease;
 			#site.w(100%);
 			#site.h(100%);
-			#site.bg(rgba(0, 0, 0, 0.3));
+			#site.bg(rgba(0, 0, 0, 0.55));
 			#site.z(1);
 		}
 		
@@ -1171,7 +1172,7 @@ hr {
 		
 		&:hover {
 			&:after {
-				#site.bg(rgba(1, 25, 95, 0.3));
+				#site.bg(rgba(1, 25, 95, 0.2));
 			}
 		}
 		
