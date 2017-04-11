@@ -5,7 +5,7 @@ $(document.body).on('azbn.render.project-list', '.b-projects .project-list', {},
 	
 	var block = $(this);
 	
-	if(screenJS.isMin(768)) {
+	if(screenJS.isMin(1200)) {
 		
 		var items = block.find('.items .item');
 		

@@ -314,6 +314,16 @@ body.modalled {
 			max-width:800px;
 			min-height:60%;
 			#site.h(auto);
+			
+			[id="project-appended"] & {
+				min-height:0%;
+			}
+		}
+		
+		&.micro {
+			max-width:800px;
+			min-height:0%;
+			#site.h(auto);
 		}
 		
 		@media @media-max-1199 {
@@ -399,7 +409,7 @@ body.modalled {
 }
 
 .__logo-item {
-	flex-basis:45%;
+	flex-basis:33%;
 	
 	@media @media-max-767 {
 		flex-basis:100%;
@@ -566,6 +576,10 @@ body.modalled {
 			max-width:100% !important;
 			margin:60px auto;
 			border:none;
+		}
+		
+		.max-h-380 {
+			max-height:380px;
 		}
 		
 		p {
@@ -1121,6 +1135,7 @@ hr {
 		
 		@media @media-max-1199 {
 			padding:0 25px;
+			//min-height:160px;
 			#site.w(33.33333333%);
 		}
 		
