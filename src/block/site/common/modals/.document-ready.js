@@ -43,3 +43,6 @@ $(document.body).on('click.azbn', '.modal-link', {}, function(event){
 	$(document.body).trigger('azbn.content-modal.open', [href]);
 	
 });
+
+
+$('.masked-input[data-input-type="phone"]').mask('+7 (999) 999-99-99');

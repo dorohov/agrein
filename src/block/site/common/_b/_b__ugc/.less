@@ -18,15 +18,27 @@
 			max-width:100% !important;
 			margin:60px auto;
 			border:none;
+			
+			@media @media-size-xs {
+				margin:20px auto;
+			}
+			
+			@media @media-size-sm {
+				margin:30px auto;
+			}
 		}
 		
 		.max-h-380 {
 			max-height:380px;
+			
+			@media @media-size-xs {
+				max-height:200px;
+			}
 		}
 		
 		p {
 			margin: 0 0 1.5em 0;
-			text-align:justify;
+			//text-align:justify;
 			#site.lh(1.5em);
 			
 			&:last-child {
@@ -74,20 +86,20 @@
 		}
 		h1 {
 			margin-bottom:60px;
-			#site.size(72px);
+			.calcFontSize(32, 72, 320, 1920);
 			#site.ff('PfDinTextCompPro');
 		}
 		h2 {
-			#site.size(56px);
+			.calcFontSize(26, 56, 320, 1920);
 		}
 		h3 {
 			margin-bottom:26px;
-			#site.size(48px);
+			.calcFontSize(24, 48, 320, 1920);
 			#site.ff('PfDinTextCompPro');
 		}
 		h4 {
 			margin-bottom:20px;
-			#site.size(18px);
+			.calcFontSize(16, 18, 320, 1920);
 			#site.ff('Open Sans');
 		}
 		

@@ -3,11 +3,12 @@ $(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-proje
 	event.preventDefault();
 	//event.stopPropogation();
 	
+	var b_projects = $(document.body).find('.b-projects');
+	
+	var in_focus_project = b_projects.find('.in-focus-project');
+	
 	if(screenJS.isMin(768)) {
 		
-		var b_projects = $(document.body).find('.b-projects');
-		
-		var in_focus_project = b_projects.find('.in-focus-project');
 		var in_focus_project__logo = in_focus_project.find('.logo');
 		
 		var btn_cont = $(document.body).find('header .header__container .site-logo');
@@ -69,7 +70,15 @@ $(document.body).on('azbn.render.in-focus-project', '.b-projects .in-focus-proje
 		
 	} else {
 		
-		
+		if(project_id) {
+			
+			//console.log('Project id:', project_id);
+			
+			var project = SiteData.projects[project_id];
+			
+			in_focus_project.find('.more a').attr('href', project.link);
+			
+		}
 		
 	}
 	
