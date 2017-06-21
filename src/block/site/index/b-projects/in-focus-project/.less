@@ -1,0 +1,163 @@
+.in-focus-project {
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	#site.color(#ffffff);
+	#site.w(75%);
+	//#site.bg(#ff0000);
+	#site.bpos();
+	#site.brep();
+	#site.bsize(cover);
+	#site.ff('Open Sans');
+	#site.z(3);
+	
+	&:before {
+		content:'';
+		position:absolute;
+		top:0;
+		left:0;
+		#site.w(100%);
+		#site.h(100%);
+		#site.z(1);
+		#site.bg(rgba(0,0,0,0.35));
+	}
+	
+	.cont {
+		position:relative;
+		/*
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+		#site.h(100%);
+		*/
+		#site.z(2);
+	}
+	
+	@media @media-max-1199 {
+		padding-left:25px;
+		padding-bottom:50px;
+		#site.w(100%);
+	}
+	
+	@media @media-max-767 {
+		display:none;
+	}
+	
+	.country-flag {
+		position:absolute;
+		top:95px;
+		#site.z(2);
+		
+		&.empty-field {
+			img {
+				opacity:0;
+			}
+		}
+		
+		img {
+			max-width:150px;
+			max-height:150px;
+			
+			@media @media-max-1199 {
+				max-height:100px;
+			}
+			
+		}
+		
+		@media @media-max-1199 {
+			right:25px;
+			top:50px;
+		}
+	}
+	
+	.logo {
+		margin-bottom:40px;
+		margin-top:95px;
+		
+		&.empty-field {
+			img {
+				opacity:0;
+			}
+		}
+		
+		@media @media-max-1199 {
+			margin-top:50px;
+			max-height:110px;
+		}
+	}
+	
+	.type {
+		margin-bottom:15px;
+		//#site.size(20px);
+		.calcFontSize(14, 20, 320, 1920);
+		
+		@media @media-max-1199 {
+			margin-right:125px;
+		}
+	}
+	
+	.title {
+		margin-bottom:15px;
+		//#site.size(100px);
+		.calcFontSize(24, 78, 320, 1920);
+		#site.ff('PfDinTextCompPro');
+		#site.bold(700);
+		
+		@media @media-max-1199 {
+			margin-right:125px;
+		}
+	}
+	
+	.desc {
+		margin-bottom:60px;
+		margin-right:125px;
+		#site.size(30px);
+		
+		@media @media-max-1199 {
+			margin-right:60px;
+		}
+	}
+	
+	.more {
+		a {
+			display:inline-block;
+			padding:16px 100px;
+			border:1px #ff0000 solid;
+			transition:all @trans-speed ease;
+			#site.color(#ffffff);
+			#site.size(18px);
+			#site.bg(transparent);
+			
+			&:hover {
+				border:1px #ffffff solid;
+				#site.color(#ff0000);
+				#site.bg(#ffffff);
+			}
+		}
+	}
+	
+	.next-project {
+		position:absolute;
+		top:0;
+		right:60px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:stretch;
+		#site.h(100%);
+		#site.z(3);
+		
+		@media @media-max-1199 {
+			right:25px;
+		}
+		
+		a {
+			display:inline-block;
+			#site.w(47px);
+			#site.h(86px);
+			#site.bi('b-projects/next-project-btn.png')
+		}
+	}
+	
+}

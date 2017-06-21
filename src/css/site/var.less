@@ -1,0 +1,92 @@
+@url-site:'';
+
+@url-path:'/wp-content/themes/azbnbasetheme'; 
+//@url-path:'';
+@url-path-css:'@{url-path}/css';
+@url-path-fonts:'@{url-path}/fonts';
+@url-path-img:'@{url-path}/img';
+@url-path-js:'@{url-path}/js';
+
+
+@media-max-399: ~"(max-width: 399px)";
+@media-max-480: ~"(max-width: 480px)";
+@media-max-567: ~"(max-width: 567px)";
+@media-max-767: ~"(max-width: 767px)";
+@media-max-811: ~"(max-width: 811px)";
+@media-max-991: ~"(max-width: 991px)";
+@media-max-1024: ~"(max-width: 1024px)";
+@media-max-1199: ~"(max-width: 1199px)";
+@media-max-1440: ~"(max-width: 1440px)";
+@media-o-p: ~"(orientation:portrait)";
+@media-o-l: ~"(orientation:landscape)";
+
+
+@c-main-bg:#ffffff;
+@c-main-color:#000000;
+@c-main-bg:#bef574;
+@c-main-7ba83f:#7ba83f;
+@c-main-bef574:#bef574;
+@c-main-932ea8:#932ea8;
+
+.calcFontSize(@f-min, @f-max, @v-min, @v-max){
+	font-size: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+.calcLineHeight(@f-min, @f-max, @v-min, @v-max){
+	line-height: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+
+#site {
+	
+	.bi(@img:'') {
+		background-image:url('@{url-path-img}/@{img}');
+	}
+	
+	.bg(@color:#ffffff) {
+		background-color:@color;
+	}
+	.bpos(@pos:center center) {
+		background-position:@pos;
+	}
+	.brep(@rep:no-repeat) {
+		background-repeat:@rep;
+	}
+	.bsize(@s:initial) {
+		background-size:@s;
+	}
+	
+	
+	.color(@color:#ffffff) {
+		color:@color;
+	}
+	.underline(@val:underline) {
+		text-decoration:@val;
+	}
+	.uppercase(@val:uppercase) {
+		text-transform:@val;
+	}
+	.size(@val:10px) {
+		font-size:@val;
+	}
+	.bold(@val:bold) {
+		font-weight:@val;
+	}
+	.italic(@val:italic) {
+		font-style:@val;
+	}
+	.z(@val:1) {
+		z-index:@val;
+	}
+	.lh(@val:1em) {
+		line-height:@val;
+	}
+	.ff(@val:Arial) {
+		font-family:@val;
+	}
+	.w(@val:0px) {
+		width:@val;
+	}
+	.h(@val:0px) {
+		height:@val;
+	}
+	
+}

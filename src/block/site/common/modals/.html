@@ -1,0 +1,79 @@
+<div class="content-modal " >
+	<div class="white-block" >
+		
+		<a href="#close" class="close-btn" ></a>
+		
+		<div class="modal-content" >
+			[[azbntple tpl="/src/block/site/common/_b/content/html.html" class="mcs-content" ]]
+		</div>
+	</div>
+</div>
+
+<div class="content-modal {{projectisactive}} " id="project-viewer" >
+	<div class="white-block" >
+		
+		<a href="#close" class="close-btn" ></a>
+		
+		<div class="modal-content" >
+			[[azbntple tpl="/src/block/site/common/_b/content/html.html" class="mcs-content" ]]
+		</div>
+	</div>
+</div>
+
+<div class="content-modal " id="project-append" >
+	<div class="white-block small" >
+		
+		<a href="#close" class="close-btn" ></a>
+		
+		<div class="modal-content" >
+			<div class="b__ugc__html" >
+				<h3>Заполните, пожалуйста, форму ниже<h3>
+				<form data-target="/formsave.txt" >
+					
+					<div class="input-block " data-required="text" data-input-status="" >
+						<label>Имя <span class="status" ></span></label>
+						<input name="f[Имя]" value="" />
+					</div>
+					
+					<div class="input-block " data-required="text" data-input-status="" >
+						<label>Телефон <!--<span class="status" ></span>--></label>
+						<input name="f[Телефон]" value="" class="masked-input" data-input-type="phone" />
+					</div>
+					
+					<div class="input-block " data-required="email" data-input-status="" >
+						<label>Email <span class="status" ></span></label>
+						<input name="f[Email]" value="" />
+					</div>
+					
+					<div class="input-block "  data-required="text" data-input-status="" >
+						<label>Ваше сообщение <span class="status" ></span></label>
+						<textarea name="f[Текст сообщения]" ></textarea>
+					</div>
+					
+					<div class="submit-block "  data-input-status="ok" >
+						<input type="submit" class="__xs__fullwidth" value="Отправить" />
+						<span class="help" >Нажмите для отправки формы</span>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-modal " id="project-appended" >
+	<div class="white-block micro" >
+		
+		<a href="#close" class="close-btn" ></a>
+		
+		<div class="modal-content" >
+			<div class="b__ugc__html" >
+				
+				<h3>Проект добавлен!</h3>
+				
+				<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+				
+			</div>
+		</div>
+	</div>
+</div>

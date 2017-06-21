@@ -1,0 +1,130 @@
+header {
+	position:relative;
+	//#site.size(18px);
+	.calcFontSize(13, 18, 320, 1920);
+	
+	.header__container {
+		padding-top:30px;
+		padding-bottom:30px;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		align-items:stretch;
+		
+		@media @media-max-1199 {
+			
+			.item {
+				#site.w(25%);
+				
+				&:last-child {
+					#site.w(auto);
+				}
+			}
+		}
+		
+		@media @media-max-991 {
+			flex-wrap:wrap;
+			
+			.item:last-child {
+				margin-top:20px;
+				text-align:center;
+				#site.w(100%);
+			}
+		}
+		
+		@media @media-max-767 {
+			max-width:100%;
+			
+			.item {
+				margin-top:0px;
+				#site.w(100%);
+				
+				&:last-child {
+					text-align:center;
+				}
+			}
+		}
+		
+		@media @media-max-767 {
+			.item.__l-border__left {
+				#site.w(50%);
+			}
+		}
+		@media @media-max-399 {
+			.item.__l-border__left {
+				#site.w(100%);
+			}
+		}
+	}
+	
+	.send-project-btn {
+		margin-left:8px;
+		display:inline-block;
+		padding:15px 24px;
+		border:2px rgba(255, 0, 0, 0.8) solid;
+		text-align:center;
+		transition:all @trans-speed ease;
+		#site.color(rgba(255, 0, 0, 0.8));
+		#site.bg(transparent);
+		#site.bold(700);
+		#site.ff('Open Sans');
+		
+		@media @media-max-480 {
+			margin-left:0px;
+			margin-top:15px;
+			padding:15px;
+		}
+		
+		&:hover {
+			#site.color(rgba(255, 255, 255, 1));
+			#site.bg(rgba(255, 0, 0, 0.8));
+		}
+	}
+	
+	.__l-border__left {
+		
+		a {
+			border:1px transparent solid;
+			border-left:1px #ff0000 solid;
+			padding:15px 24px;
+			#site.color(#000000);
+			#site.lh(48px);
+			#site.ff('Open Sans');
+			
+			@media @media-max-1199 {
+				padding:15px 5px;
+				border-left:1px transparent solid;
+				//#site.size(16px);
+			}
+			
+			&:hover {
+				#site.underline();
+			}
+			
+		}
+		
+		@media @media-max-1199 {
+			padding-top:15px;
+			text-align:center;
+		}
+		
+		@media @media-max-1024 {
+			padding-top:15px;
+		}
+		
+		@media @media-max-991 {
+			a {
+				//#site.size(16px);
+			}
+		}
+		
+		@media @media-max-767 {
+			padding-top:0px;
+			
+			a {
+				//#site.size(14px);
+			}
+		}
+	}
+	
+}

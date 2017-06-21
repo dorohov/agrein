@@ -1,0 +1,33 @@
+.e {
+	
+}
+
+.site-logo {
+	display:inline-block;
+	max-width:100%;
+	#site.bi('common/site-logo.png');
+	#site.brep();
+	#site.bsize(contain);
+	#site.bpos();
+	#site.w(223px);
+	#site.h(61px);
+	
+	@media @media-max-767 {
+		display:block;
+		margin:0 auto;
+		#site.w(172px);
+		#site.h(64px);
+	}
+}
+
+.__bold {
+	#site.bold(700);
+}
+
+.__logo-item {
+	flex-basis:33%;
+	
+	@media @media-max-767 {
+		flex-basis:100%;
+	}
+}
